@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+
+  min-height: 100vh;
+
+  background: linear-gradient(135deg, #1b2855 0%, #223772 45%, #314f9c 100%);
+
+  overflow: hidden;
+}
+
+#welcome-root,
+#root {
+  min-height: 100vh;
+}
+
+
+
+.welcome-page {
+  width: 100%;
+  min-height: 100vh;
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-wrapper {
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 45px;
+}
+
+.user-email {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.user-email span {
+  font-weight: 700;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 30px;
+
+  border: none;
+
+  border-radius: 50px;
+
+  background: white;
+
+  color: #5066d9;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.35s;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.logout-btn:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22);
+}
+
+.logout-icon {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+
+  background: #eef1ff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 18px;
+}
+
+.welcome-card {
+  position: relative;
+
+  height: 500px;
+
+  border-radius: 34px;
+
+  overflow: hidden;
+
+  background: linear-gradient(145deg, #ffffff, #fafbff);
+
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.22);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-card h1 {
+  font-family: "Fraunces", serif;
+
+  text-align: center;
+
+  font-size: 88px;
+
+  line-height: 1.05;
+
+  color: #20213d;
+
+  font-weight: 700;
+
+  letter-spacing: -2px;
+
+  position: relative;
+
+  z-index: 3;
+}
+
+.card-circle {
+  position: absolute;
+
+  border-radius: 50%;
+}
+
+.top-right {
+  width: 340px;
+  height: 340px;
+
+  right: -90px;
+  top: -90px;
+
+  background: radial-gradient(
+    circle,
+    rgba(153, 170, 255, 0.35),
+    rgba(153, 170, 255, 0.12),
+    transparent 72%
+  );
+}
+
+.bottom-left {
+  width: 300px;
+  height: 300px;
+
+  left: -90px;
+  bottom: -90px;
+
+  background: radial-gradient(
+    circle,
+    rgba(245, 194, 224, 0.55),
+    rgba(245, 194, 224, 0.15),
+    transparent 75%
+  );
+}
+
+.bg-circle {
+  position: absolute;
+
+  border-radius: 50%;
+}
+
+.circle-left {
+  width: 320px;
+  height: 320px;
+
+  top: -120px;
+  left: -150px;
+
+  background: rgba(70, 92, 176, 0.22);
+
+  backdrop-filter: blur(10px);
+}
+
+.circle-bottom {
+  width: 260px;
+  height: 260px;
+
+  bottom: -110px;
+  left: -40px;
+
+  background: radial-gradient(circle, #b15fd3, #8f53cb);
+
+  opacity: 0.75;
+}
+
+.circle-right {
+  width: 240px;
+  height: 240px;
+
+  right: -70px;
+  bottom: -70px;
+
+  background: rgba(68, 93, 181, 0.22);
+}
+
+/* ==========================================
+   Decorative Gold Ring
+========================================== */
+
+.gold-ring {
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  border: 5px solid #f4bb37;
+
+  border-radius: 50%;
+
+  right: 120px;
+  top: 190px;
+
+  opacity: 0.95;
+
+  z-index: 1;
+}
+
+/* ==========================================
+   Decorative Dots
+========================================== */
+
+.welcome-card::after {
+  content: "";
+
+  position: absolute;
+
+  right: -90px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 80px;
+  height: 80px;
+
+  background-image: radial-gradient(#5d6ec8 2px, transparent 2px);
+
+  background-size: 18px 18px;
+
+  opacity: 0.65;
+}
+
+/* ==========================================
+   Soft Light Effect
+========================================== */
+
+.welcome-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 255, 255, 0.78),
+    rgba(245, 247, 255, 0.95)
+  );
+
+  opacity: 0.35;
+
+  pointer-events: none;
+}
+
+/* ==========================================
+   Floating Animation
+========================================== */
+
+.circle-bottom {
+  animation: floatPurple 9s ease-in-out infinite;
+}
+
+.circle-left {
+  animation: floatBlue 12s ease-in-out infinite;
+}
+
+.circle-right {
+  animation: floatBlue 10s ease-in-out infinite reverse;
+}
+
+.gold-ring {
+  animation: ringFloat 8s ease-in-out infinite;
+}
+
+@keyframes floatPurple {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatBlue {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(20px, -20px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes ringFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(10deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+/* ==========================================
+   Button Improvements
+========================================== */
+
+.logout-btn {
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s,
+    background 0.3s,
+    color 0.3s;
+}
+
+.logout-btn:hover {
+  background: #5066d9;
+
+  color: white;
+}
+
+.logout-btn:hover .logout-icon {
+  background: white;
+
+  color: #5066d9;
+}
+
+/* ==========================================
+   Card Hover
+========================================== */
+
+.welcome-card {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.welcome-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 55px 100px rgba(0, 0, 0, 0.28);
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width: 1000px) {
+  .welcome-card {
+    height: 520px;
+  }
+
+  .welcome-card h1 {
+    font-size: 64px;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .logout-btn {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 700px) {
+  .welcome-card {
+    height: 420px;
+  }
+
+  .welcome-card h1 {
+    font-size: 46px;
+  }
+
+  .user-email {
+    font-size: 1rem;
+  }
+
+  .logout-btn {
+    padding: 12px 22px;
+  }
+
+  .gold-ring {
+    display: none;
+  }
+
+  .circle-left,
+  .circle-right {
+    display: none;
+  }
+}
